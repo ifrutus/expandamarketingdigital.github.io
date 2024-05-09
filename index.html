@@ -24,7 +24,7 @@
         h1 {
             margin-bottom: 20px;
         }
-        .link-container {
+        .link-container, .home-button {
             margin-top: 20px;
         }
         a {
@@ -41,20 +41,32 @@
             background-color: lime; /* Fundo verde ao passar o mouse */
             color: #0a0a0a; /* Texto escuro */
         }
+        .btn-primary {
+            color: #fff;
+            background-color: #f97316; /* Cor de fundo laranja */
+            border-color: #f97316; /* Borda laranja */
+        }
+        .btn-primary:hover {
+            background-color: #dd6b20; /* Cor de fundo mais escura ao passar o mouse */
+            border-color: #c05621; /* Borda mais escura ao passar o mouse */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Bem-vindos ao Expandaverso</h1>
+        <h1>Bem-vindos ao ExpandaVerso</h1>
         <p>Escolha qual projeto quer testar:</p>
         <div class="link-container">
             <!-- Links para projetos específicos -->
             <a href="todolist.html">To Do List</a>
-            <a href="link-para-projeto2.html">Projeto 2</a>
-            <a href="link-para-projeto3.html">Projeto 3</a>
+            <a href="link-para-projeto2.html">Rede Social de Marketing</a>
+            <a href="link-para-projeto3.html">???</a>
             <!-- Adicione mais projetos conforme necessário -->
         </div>
-        <a href="index.html">Testar outro projeto</a>
+        <div class="home-button">
+            <!-- Botão para voltar para a página inicial -->
+            <button type="button" class="btn btn-primary" onclick="window.location.href='index.html';">Voltar para Home</button>
+        </div>
     </div>
 </body>
 </html>
