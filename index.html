@@ -3,135 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
+    <title>Bem-vindos ao ExpandaVerso</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            background-color: black;
-            color: lime;
+            background-color: #0a0a0a; /* Um fundo escuro */
+            color: #fff; /* Texto branco */
+            font-family: Arial, sans-serif; /* Fonte padrão */
         }
         .container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100%;
+            text-align: center;
         }
-        ul {
-            list-style-type: none;
-            padding: 0;
+        h1 {
+            margin-bottom: 20px;
         }
-        ul li {
-            border: 1px solid lime;
-            margin-top: 5px;
+        .link-container {
+            margin-top: 20px;
+        }
+        a {
+            color: lime; /* Links em verde */
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            border: 2px solid lime; /* Borda verde */
             padding: 10px;
-            background-color: #111;
-            cursor: pointer;
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: background-color 0.3s, color 0.3s;
         }
-        ul li:hover {
-            opacity: 0.7;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-        .modal-content {
-            background-color: #111;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid lime;
-            width: 80%;
-        }
-        input[type="text"] {
-            width: 70%;
-            padding: 10px;
-            margin-top: 10px;
-            border: none;
-            background-color: #111;
-            color: lime;
-            border-bottom: 2px solid lime;
-        }
-        .fade-in {
-            animation: fadeInAnimation ease 3s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
-        @keyframes fadeInAnimation {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
+        a:hover, a:focus {
+            background-color: lime; /* Fundo verde ao passar o mouse */
+            color: #0a0a0a; /* Texto escuro */
         }
     </style>
 </head>
 <body>
-    <div class="container text-center">
-        <div>
-            <h1>To Do List</h1>
-            <ul id="todo-list">
-                <li onclick="completeTask(this)">Alterações site AutoDeal</li>
-                <li onclick="completeTask(this)">Posts Conservas e Enlatados blog iFrutus</li>
-                <li onclick="completeTask(this)">Posts para Instagram Expanda</li>
-            </ul>
-            <input type="text" id="newTaskInput" placeholder="Adicionar tarefa" onkeypress="handleKeyPress(event)">
-            <button type="button" class="btn btn-success" onclick="addTask()">+</button>
-            <button type="button" class="btn btn-success" onclick="showModal()">Ver Tarefas Concluídas</button>
+    <div class="container">
+        <h1>Bem-vindos ao Expandaverso</h1>
+        <p>Escolha qual projeto quer testar:</p>
+        <div class="link-container">
+            <!-- Links para projetos específicos -->
+            <a href="todolist.html">To Do List</a>
+            <a href="link-para-projeto2.html">Projeto 2</a>
+            <a href="link-para-projeto3.html">Projeto 3</a>
+            <!-- Adicione mais projetos conforme necessário -->
         </div>
+        <a href="index.html">Testar outro projeto</a>
     </div>
-
-    <!-- Modal -->
-    <div id="completedTasksModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Tarefas Concluídas</h2>
-            <ul id="completed-list"></ul>
-        </div>
-    </div>
-
-    <script>
-        function completeTask(element) {
-            const completedList = document.getElementById("completed-list");
-            const newNode = element.cloneNode(true);
-            newNode.onclick = null; // Remove o evento de clique
-            completedList.appendChild(newNode);
-            element.remove(); // Remove da lista original
-        }
-
-        function addTask() {
-            const input = document.getElementById("newTaskInput");
-            const newTask = input.value.trim();
-            if (newTask) {
-                const list = document.getElementById("todo-list");
-                const newListItem = document.createElement("li");
-                newListItem.textContent = newTask;
-                newListItem.onclick = function() { completeTask(this); };
-                newListItem.classList.add("fade-in");
-                list.appendChild(newListItem);
-                input.value = ""; // Limpa o campo de entrada
-            } else {
-                alert("Por favor, insira uma tarefa.");
-            }
-        }
-
-        function handleKeyPress(event) {
-            if (event.key === "Enter") {
-                addTask();
-            }
-        }
-
-        function showModal() {
-            document.getElementById("completedTasksModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("completedTasksModal").style.display = "none";
-        }
-    </script>
 </body>
 </html>
