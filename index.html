@@ -3,80 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legate Capital</title>
+  <title>LEGATE CAPITAL</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/lucide@latest" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-flex">
-      <img src="Legate_LogoBranco.svg" alt="Legate Capital" class="logo" />
+      <img src="Legate_LogoBranco.svg" alt="LEGATE CAPITAL" class="logo" />
       <nav>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#contato">Contato</a>
+        <a href="#abrir-conta" class="cta-menu">Abrir conta</a>
       </nav>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <h2>Investir com segurança, simplicidade e inovação</h2>
-      <p>Soluções financeiras completas para investidores modernos.</p>
-      <a href="#" class="cta">Abrir minha conta</a>
-    </div>
-  </section>
-
-  <section id="sobre" class="section">
-    <div class="container grid">
-      <img src="predios-legate.png" alt="Imagem sobre" />
-      <div>
-        <h3>Quem somos</h3>
-        <p>A Legate Capital é uma corretora moderna, focada em oferecer a melhor experiência para o investidor.</p>
-        <p>Cuidamos do seu patrimônio com dedicação e segurança.</p>
+    <div class="hero-image-wrapper">
+      <img src="predios-legate.png" alt="Prédios Legate" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <p class="subtitle">LEGATE CAPITAL</p>
+        <h2><strong>Asset e Wealth Management</strong><br />com foco em independência e segurança</h2>
+        <p class="desc">Soluções financeiras completas para investidores modernos.</p>
+        <a href="#abrir-conta" class="cta">Abrir minha conta</a>
+        <a href="#contato" class="cta ghost">Fale com a gente</a>
       </div>
     </div>
   </section>
 
-  <section id="servicos" class="section bg-gray">
-    <div class="container">
-      <h3>Nossos Diferenciais</h3>
-      <div class="cards">
-        <div class="card">
-          <div class="icon" data-lucide="shield-check"></div>
-          <h4>Segurança Garantida</h4>
-          <p>Regulamentada e com proteção do FGC.</p>
-        </div>
-        <div class="card">
-          <div class="icon" data-lucide="bar-chart-3"></div>
-          <h4>Alta Performance</h4>
-          <p>Produtos de alto rendimento, com curadoria.</p>
-        </div>
-        <div class="card">
-          <div class="icon" data-lucide="users"></div>
-          <h4>Atendimento Humanizado</h4>
-          <p>Consultores experientes prontos para te ajudar.</p>
-        </div>
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre-section">
+    <div class="sobre-overlay">
+      <div class="container">
+        <h3>Sobre a <strong>LEGATE CAPITAL</strong></h3>
+        <p>A LEGATE CAPITAL é uma gestora moderna e independente que atua com foco em segurança, performance e transparência.</p>
       </div>
     </div>
   </section>
+  
 
+  <!-- O QUE FAZEMOS -->
+<section id="servicos" class="section bg-light">
+  <div class="container">
+    <h3 class="section-title">O que fazemos</h3>
+    <div class="cards-horizontal">
+      <div class="card-servico">
+        <h4>Planejamento Patrimonial</h4>
+        <p>Investir olhando para o que importa na vida do cliente.</p>
+      </div>
+      <div class="card-servico">
+        <h4>Consultoria de Investimentos</h4>
+        <p>Investir com uma gestão customizada, profissional e ativa.</p>
+      </div>
+      <div class="card-servico">
+        <h4>Seleção de Produtos</h4>
+        <p>Expertise na seleção dos melhores gestores e ativos do mercado.</p>
+      </div>
+      <div class="card-servico">
+        <h4>Soluções Táticas</h4>
+        <p>Avaliação de oportunidades táticas para hedge e otimização de retornos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO DE DESTAQUE COM IMAGEM E TEXTO FLUTUANDO -->
+<section class="image-text-highlight">
+  <div class="overlay-right-text">
+    <div class="container-right">
+      <h3>Seja um cliente LEGATE</h3>
+      <p>Conheça nossas soluções e os benefícios de ter uma gestão moderna, sólida e personalizada para o seu patrimônio.</p>
+      <a href="#contato" class="cta white">Fale com nosso time</a>
+    </div>
+  </div>
+</section>
+
+  <!-- CONTATO -->
   <section id="contato" class="section">
     <div class="container center">
       <h3>Fale com a gente</h3>
-      <p>Pronto para investir com inteligência? Fale conosco agora mesmo.</p>
-      <a href="#" class="cta">Entrar em contato</a>
+      <p>Entre em contato com nosso time de especialistas. Teremos prazer em atendê-lo.</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Mensagem" required></textarea>
+        <button type="submit" class="cta">Enviar mensagem</button>
+      </form>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    © <span id="year"></span> Legate Capital. Todos os direitos reservados.
+    <div class="container footer-flex">
+      <p>© <span id="year"></span> LEGATE CAPITAL. Todos os direitos reservados.</p>
+      <div class="social-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    lucide.createIcons();
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
