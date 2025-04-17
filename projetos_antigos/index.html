@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Expandaverso</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background-color: #0a0a0a; /* Um fundo escuro */
+            color: #fff; /* Texto branco */
+            font-family: Arial, sans-serif; /* Fonte padrão */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .link-container, .home-button {
+            margin-top: 20px;
+        }
+        a {
+            color: lime; /* Links em verde */
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            border: 2px solid lime; /* Borda verde */
+            padding: 10px;
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        a:hover, a:focus {
+            background-color: lime; /* Fundo verde ao passar o mouse */
+            color: #0a0a0a; /* Texto escuro */
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #f97316; /* Cor de fundo laranja */
+            border-color: #f97316; /* Borda laranja */
+        }
+        .btn-primary:hover {
+            background-color: #dd6b20; /* Cor de fundo mais escura ao passar o mouse */
+            border-color: #c05621; /* Borda mais escura ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindos ao ExpandaVerso</h1>
+        <p>Escolha qual projeto quer testar:</p>
+        <div class="link-container">
+            <!-- Links para projetos específicos -->
+            <a href="todolist.html">To Do List</a>
+            <a href="link-para-projeto2.html">Rede Social de Marketing</a>
+            <a href="link-para-projeto3.html">???</a>
+            <!-- Adicione mais projetos conforme necessário -->
+        </div>
+        <div class="home-button">
+            <!-- Botão para voltar para a página inicial -->
+            <button type="button" class="btn btn-primary" onclick="window.location.href='index.html';">Voltar para Home</button>
+        </div>
+    </div>
+</body>
+</html>

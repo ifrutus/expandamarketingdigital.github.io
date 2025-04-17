@@ -1,72 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Expandaverso</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            background-color: #0a0a0a; /* Um fundo escuro */
-            color: #fff; /* Texto branco */
-            font-family: Arial, sans-serif; /* Fonte padrão */
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        .link-container, .home-button {
-            margin-top: 20px;
-        }
-        a {
-            color: lime; /* Links em verde */
-            text-decoration: none;
-            font-size: 20px;
-            margin: 10px;
-            border: 2px solid lime; /* Borda verde */
-            padding: 10px;
-            border-radius: 5px; /* Bordas arredondadas */
-            transition: background-color 0.3s, color 0.3s;
-        }
-        a:hover, a:focus {
-            background-color: lime; /* Fundo verde ao passar o mouse */
-            color: #0a0a0a; /* Texto escuro */
-        }
-        .btn-primary {
-            color: #fff;
-            background-color: #f97316; /* Cor de fundo laranja */
-            border-color: #f97316; /* Borda laranja */
-        }
-        .btn-primary:hover {
-            background-color: #dd6b20; /* Cor de fundo mais escura ao passar o mouse */
-            border-color: #c05621; /* Borda mais escura ao passar o mouse */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legate Capital</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/lucide@latest" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div class="container">
-        <h1>Bem-vindos ao ExpandaVerso</h1>
-        <p>Escolha qual projeto quer testar:</p>
-        <div class="link-container">
-            <!-- Links para projetos específicos -->
-            <a href="todolist.html">To Do List</a>
-            <a href="link-para-projeto2.html">Rede Social de Marketing</a>
-            <a href="link-para-projeto3.html">???</a>
-            <!-- Adicione mais projetos conforme necessário -->
-        </div>
-        <div class="home-button">
-            <!-- Botão para voltar para a página inicial -->
-            <button type="button" class="btn btn-primary" onclick="window.location.href='index.html';">Voltar para Home</button>
-        </div>
+  <header class="header">
+    <div class="container header-flex">
+      <img src="Legate_LogoBranco.svg" alt="Legate Capital" class="logo" />
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Investir com segurança, simplicidade e inovação</h2>
+      <p>Soluções financeiras completas para investidores modernos.</p>
+      <a href="#" class="cta">Abrir minha conta</a>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="container grid">
+      <img src="predios-legate.png" alt="Imagem sobre" />
+      <div>
+        <h3>Quem somos</h3>
+        <p>A Legate Capital é uma corretora moderna, focada em oferecer a melhor experiência para o investidor.</p>
+        <p>Cuidamos do seu patrimônio com dedicação e segurança.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="section bg-gray">
+    <div class="container">
+      <h3>Nossos Diferenciais</h3>
+      <div class="cards">
+        <div class="card">
+          <div class="icon" data-lucide="shield-check"></div>
+          <h4>Segurança Garantida</h4>
+          <p>Regulamentada e com proteção do FGC.</p>
+        </div>
+        <div class="card">
+          <div class="icon" data-lucide="bar-chart-3"></div>
+          <h4>Alta Performance</h4>
+          <p>Produtos de alto rendimento, com curadoria.</p>
+        </div>
+        <div class="card">
+          <div class="icon" data-lucide="users"></div>
+          <h4>Atendimento Humanizado</h4>
+          <p>Consultores experientes prontos para te ajudar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <div class="container center">
+      <h3>Fale com a gente</h3>
+      <p>Pronto para investir com inteligência? Fale conosco agora mesmo.</p>
+      <a href="#" class="cta">Entrar em contato</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © <span id="year"></span> Legate Capital. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
