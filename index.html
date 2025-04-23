@@ -4,21 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LEGATE CAPITAL</title>
+  <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoH5YkM0QxwHfXyRyFf8TJOa79Xl5p9yyk5sv6M+0U6wWLa" crossorigin="anonymous">
 </head>
 <body>
   <!-- HEADER -->
   <header class="header">
-    <div class="container header-flex">
-      <img src="Legate_LogoBranco.svg" alt="LEGATE CAPITAL" class="logo" />
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-        <a href="#abrir-conta" class="cta-menu">Abrir conta</a>
-      </nav>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="Legate_LogoBranco.svg" alt="LEGATE CAPITAL" style="height: 80px; width: auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a href="#abrir-conta" class="btn btn-danger ms-lg-3">Abrir conta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <!-- HERO -->
@@ -45,50 +64,49 @@
       </div>
     </div>
   </section>
-  
 
   <!-- O QUE FAZEMOS -->
-<section id="servicos" class="section bg-light">
-  <div class="container">
-    <h3 class="section-title">O que fazemos</h3>
-    <div class="cards-horizontal">
-      <div class="card-servico">
-        <h4>Planejamento Patrimonial</h4>
-        <p>Investir olhando para o que importa na vida do cliente.</p>
-      </div>
-      <div class="card-servico">
-        <h4>Consultoria de Investimentos</h4>
-        <p>Investir com uma gestão customizada, profissional e ativa.</p>
-      </div>
-      <div class="card-servico">
-        <h4>Seleção de Produtos</h4>
-        <p>Expertise na seleção dos melhores gestores e ativos do mercado.</p>
-      </div>
-      <div class="card-servico">
-        <h4>Soluções Táticas</h4>
-        <p>Avaliação de oportunidades táticas para hedge e otimização de retornos.</p>
+  <section id="servicos" class="section bg-light">
+    <div class="container">
+      <h3 class="section-title">O que fazemos</h3>
+      <div class="cards-horizontal">
+        <div class="card-servico">
+          <h4>Planejamento Patrimonial</h4>
+          <p>Investir olhando para o que importa na vida do cliente.</p>
+        </div>
+        <div class="card-servico">
+          <h4>Consultoria de Investimentos</h4>
+          <p>Investir com uma gestão customizada, profissional e ativa.</p>
+        </div>
+        <div class="card-servico">
+          <h4>Seleção de Produtos</h4>
+          <p>Expertise na seleção dos melhores gestores e ativos do mercado.</p>
+        </div>
+        <div class="card-servico">
+          <h4>Soluções Táticas</h4>
+          <p>Avaliação de oportunidades táticas para hedge e otimização de retornos.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SEÇÃO DE DESTAQUE COM IMAGEM E TEXTO FLUTUANDO -->
-<section class="image-text-highlight">
-  <div class="overlay-right-text">
-    <div class="container-right">
-      <h3>Seja um cliente LEGATE</h3>
-      <p>Conheça nossas soluções e os benefícios de ter uma gestão moderna, sólida e personalizada para o seu patrimônio.</p>
-      <a href="#contato" class="cta white">Fale com nosso time</a>
+  <!-- DESTAQUE -->
+  <section class="image-text-highlight">
+    <div class="overlay-right-text">
+      <div class="container-right">
+        <h3>Seja um cliente LEGATE</h3>
+        <p>Conheça nossas soluções e os benefícios de ter uma gestão moderna, sólida e personalizada para o seu patrimônio.</p>
+        <a href="#contato" class="cta white">Fale com nosso time</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- CONTATO -->
   <section id="contato" class="section">
-    <div class="container center">
+    <div class="container text-center">
       <h3>Fale com a gente</h3>
       <p>Entre em contato com nosso time de especialistas. Teremos prazer em atendê-lo.</p>
-      <form class="contact-form">
+      <form class="contact-form mx-auto">
         <input type="text" placeholder="Nome" required />
         <input type="email" placeholder="Email" required />
         <textarea placeholder="Mensagem" required></textarea>
@@ -111,5 +129,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-HoA1Ek04qz1YK3mhYIjL+GblzhD1TxXv/t9m5WUJf5Dptja7zTmr6jNYzMFUgR9i" crossorigin="anonymous"></script>
 </body>
 </html>
