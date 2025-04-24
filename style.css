@@ -1,68 +1,58 @@
-/* RESET */
+/* === RESET GERAL === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fff;
   color: #1e293b;
   line-height: 1.6;
 }
-
 img {
   max-width: 100%;
   display: block;
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
 .container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 1.5rem;
 }
 
-/* HEADER */
+/* === CABEÇALHO E NAVEGAÇÃO === */
 .header {
   background: #000;
   color: #fff;
   padding: 1rem 0;
 }
-
 .header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-
 .logo {
   height: 50px;
 }
-
 nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-
 nav a {
   color: #fff;
   margin-left: 1rem;
   font-size: 0.95rem;
   transition: color 0.2s ease;
 }
-
 nav a:hover {
   color: #b91c1c;
 }
-
 .cta-menu {
   background: #b91c1c;
   padding: 0.5rem 1rem;
@@ -71,7 +61,7 @@ nav a:hover {
   font-weight: 600;
 }
 
-/* HERO SECTION */
+/* === SEÇÃO HERO / CAPA === */
 .hero {
   position: relative;
   width: 100%;
@@ -82,13 +72,11 @@ nav a:hover {
   justify-content: center;
   text-align: center;
 }
-
 .hero-image-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .hero-bg-img {
   position: absolute;
   top: 0;
@@ -99,7 +87,6 @@ nav a:hover {
   filter: blur(4px) brightness(0.6);
   z-index: 1;
 }
-
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -110,7 +97,6 @@ nav a:hover {
   backdrop-filter: blur(2px);
   z-index: 2;
 }
-
 .hero-text {
   position: absolute;
   top: 50%;
@@ -125,7 +111,6 @@ nav a:hover {
   animation: fadeUp 1s ease-out forwards;
   opacity: 0;
 }
-
 .hero-text .subtitle {
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -134,26 +119,22 @@ nav a:hover {
   opacity: 0.8;
   margin-bottom: 0.75rem;
 }
-
 .hero-text h2 {
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 1rem;
 }
-
 .hero-text h2 strong {
   font-weight: 800;
   display: block;
   font-size: 3rem;
 }
-
 .hero-text .desc {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   color: #e2e8f0;
 }
-
 .cta,
 .cta.ghost {
   display: inline-block;
@@ -164,42 +145,35 @@ nav a:hover {
   margin-right: 1rem;
   font-size: 0.95rem;
 }
-
 .cta {
   background-color: #b91c1c;
   color: #fff;
 }
-
 .cta:hover {
   background-color: #991b1b;
 }
-
 .cta.ghost {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
 }
-
 .cta.ghost:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* SECTIONS */
+/* === SEÇÕES GENÉRICAS === */
 .section {
   padding: 5rem 1.5rem;
 }
-
 .bg-gray {
   background-color: #f8fafc;
 }
-
 .section h3 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-align: center;
 }
-
 .section p {
   max-width: 700px;
   margin: 0 auto;
@@ -207,7 +181,7 @@ nav a:hover {
   font-size: 1.05rem;
 }
 
-/* FEATURED SECTION */
+/* === SEÇÃO DESTAQUES / CARDS === */
 .featured-section {
   display: flex;
   flex-wrap: wrap;
@@ -217,21 +191,18 @@ nav a:hover {
   background-color: #f1f5f9;
   padding: 4rem 1.5rem;
 }
-
 .featured-image {
   flex: 1 1 350px;
   max-width: 500px;
   border-radius: 12px;
   overflow: hidden;
 }
-
 .featured-cards {
   flex: 2 1 500px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-
 .featured-card {
   background-color: #fff;
   padding: 2rem;
@@ -239,25 +210,22 @@ nav a:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .featured-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
-
 .featured-card h4 {
   margin-bottom: 0.5rem;
   color: #b91c1c;
   font-size: 1.1rem;
   font-weight: 700;
 }
-
 .featured-card p {
   font-size: 0.95rem;
   color: #475569;
 }
 
-/* ANIMATION */
+/* === ANIMAÇÕES === */
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -269,7 +237,7 @@ nav a:hover {
   }
 }
 
-/* FORMULÁRIO DE CONTATO */
+/* === FORMULÁRIO DE CONTATO === */
 .contact-form {
   margin-top: 2rem;
   display: flex;
@@ -279,7 +247,6 @@ nav a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem 1rem;
@@ -287,13 +254,12 @@ nav a:hover {
   border: 1px solid #d1d5db;
   font-size: 1rem;
 }
-
 .contact-form textarea {
   resize: vertical;
   min-height: 120px;
 }
 
-/* FOOTER */
+/* === RODAPÉ === */
 .footer {
   background: #000;
   color: #fff;
@@ -301,79 +267,59 @@ nav a:hover {
   padding: 2rem 1rem;
   font-size: 0.85rem;
 }
-
 .footer-flex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
 }
-
 .footer .social-links a {
   color: #b91c1c;
   margin-left: 1rem;
   text-decoration: none;
   font-weight: 600;
 }
-
 .footer .social-links a:hover {
   text-decoration: underline;
 }
 
-/* RESPONSIVO */
+/* === RESPONSIVIDADE / MOBILE === */
 @media (max-width: 768px) {
   .hero-text {
     padding: 1.5rem;
   }
-
   .hero-text h2 {
     font-size: 2rem;
   }
-
   .hero-text h2 strong {
     font-size: 2.3rem;
   }
-
   .footer-flex {
     flex-direction: column;
     gap: 1rem;
   }
-
   nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
     margin-top: 1rem;
   }
-
   .featured-section {
     flex-direction: column;
     align-items: center;
   }
-
   .featured-image,
   .featured-cards {
     max-width: 100%;
   }
 }
 
-/* SEÇÃO DE CARDS EM LINHA */
-.bg-light {
-  background-color: #f8fafc;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  font-size: 2rem;
-}
-
+/* === SERVIÇOS EM LINHA === */
 .cards-horizontal {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
-
 .card-servico {
   background: #fff;
   padding: 2rem;
@@ -382,18 +328,16 @@ nav a:hover {
   text-align: left;
   transition: transform 0.3s ease;
 }
-
 .card-servico:hover {
   transform: translateY(-5px);
 }
-
 .card-servico h4 {
   color: #b91c1c;
   margin-bottom: 0.75rem;
   font-size: 1.2rem;
 }
 
-/* SEÇÃO COM IMAGEM E TEXTO À DIREITA */
+/* === DESTAQUE COM IMAGEM E TEXTO === */
 .image-text-highlight {
   position: relative;
   background: url('predios.jpg') center center / cover no-repeat;
@@ -403,7 +347,6 @@ nav a:hover {
   justify-content: flex-end;
   color: #fff;
 }
-
 .overlay-right-text {
   background: rgba(0, 0, 0, 0.5);
   padding: 3rem;
@@ -411,17 +354,14 @@ nav a:hover {
   margin-right: 5%;
   border-radius: 12px;
 }
-
 .container-right h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 .container-right p {
   font-size: 1.05rem;
   margin-bottom: 1.5rem;
 }
-
 .cta.white {
   background: #fff;
   color: #b91c1c;
@@ -431,32 +371,27 @@ nav a:hover {
   text-decoration: none;
   transition: background 0.3s ease;
 }
-
 .cta.white:hover {
   background: #f1f1f1;
 }
 
-/* SOBRE COM IMAGEM DE FUNDO E OVERLAY #1d2639 */
+/* === SOBRE COM FUNDO ESCURO === */
 .sobre-section {
-  /*background: url('working.jpg') center center / cover no-repeat;*/
   position: relative;
   padding: 6rem 1.5rem;
 }
-
 .sobre-overlay {
-  background: rgba(29, 38, 57, 0.85); /* cor #1d2639 com 85% de opacidade */
+  background: rgba(29, 38, 57, 0.85);
   padding: 4rem 1.5rem;
   text-align: center;
   border-radius: 8px;
   color: #fff;
 }
-
 .sobre-overlay h3 {
   font-size: 2.2rem;
   margin-bottom: 1rem;
   font-weight: 800;
 }
-
 .sobre-overlay p {
   font-size: 1.1rem;
   max-width: 800px;
