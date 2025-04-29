@@ -30,7 +30,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} 
 
 .logo {
   font-weight: 600;
@@ -61,10 +61,25 @@ nav button {
   cursor: pointer;
 }
 
+.btn-whatsapp {
+  background-color: #4CAF70; /* Verde Institucional */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
 .hero {
   position: relative;
   height: 100vh;
-  background: url('/images/hero.jpeg') no-repeat center center/cover;
+  background: url('/ECImoveis/images/hero.jpeg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,6 +176,72 @@ nav button {
   }
 }
 
+/* ESPECIALIDADE */
+.especialidade {
+  background-color: #4CAF70; /* verde institucional */
+  padding: 80px 20px;
+}
+
+.especialidade-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.especialidade-texto {
+  flex: 1 1 500px;
+  color: #f9f9f9;
+  padding-left: 25px;
+  border-left: 4px solid #D4AF37; /* detalhe dourado premium */
+}
+
+.especialidade-texto h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.especialidade-texto p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+.especialidade-imagem {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.especialidade-imagem img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* profundidade elegante */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .especialidade-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .especialidade-texto {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .especialidade-imagem img {
+    max-width: 100%;
+  }
+}
+
 /* SEÇÃO IMÓVEIS */
 .imoveis {
   padding: 80px 20px;
@@ -178,6 +259,40 @@ nav button {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  color: #032E51;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  margin-bottom: 8px;
+  color: #444;
 }
 
 /* FORMULÁRIO DE CONTATO */
@@ -229,4 +344,98 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+}
+
+.footer-institucional {
+  background-color: #2a7c4f; /* tom de verde mais escuro */
+  color: white;
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  margin-bottom: 10px;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer-nome {
+  font-size: 18px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+.footer-contato {
+  max-width: 300px;
+}
+
+.footer-contato h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-contato p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-contato a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contato {
+    margin-top: 20px;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
 }

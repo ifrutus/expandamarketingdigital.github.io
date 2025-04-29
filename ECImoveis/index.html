@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EC Imóveis</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> <!-- SwiperJS CSS -->
 </head>
 <body>
   <header>
@@ -15,7 +16,7 @@
           <li><a href="#home">Início</a></li>
           <li><a href="#imoveis">Galeria</a></li>
           <li><a href="#contato">Apartamentos</a></li>
-          <button>whatsapp</button>
+          <a href="https://wa.me/5511916298686" target="_blank" class="btn-whatsapp">Whatsapp</a>
         </ul>
       </nav>
     </div>
@@ -29,10 +30,48 @@
     </div>
   </section>
 
+  <section class="especialidade">
+    <div class="especialidade-container">
+      <div class="especialidade-texto">
+        <h2>Especialidade e identificação com condomínios de alto padrão</h2>
+        <p>Desde 2017 focada no mercado de imóveis de luxo, proporcionamos aos nossos clientes acesso às melhores opções de venda e locação nos exclusivos condomínios Quinta da Baroneza e Praça Villa Lobos, onde elegância e privacidade são prioridades.</p>
+      </div>
+      <div class="especialidade-imagem">
+        <img src="/ECImoveis/images/especialidade.png" alt="Imóvel de alto padrão">
+      </div>
+    </div>
+  </section>
+
   <section id="imoveis" class="imoveis">
     <h2>Imóveis em destaque</h2>
     <div class="cards-container">
       <!-- Cards dos imóveis vão aqui -->
+      <div class="card">
+        <img src="/ECImoveis/images/casa-teste.jpg" alt="Casa moderna no condomínio X">
+        <div class="card-content">
+          <h3>Casa moderna - Quinta da Baroneza</h3>
+          <p>5 suítes • 650m² • Piscina e espaço gourmet</p>
+          <p><strong>R$ 8.500.000</strong></p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="/ECImoveis/images/casa-teste.jpg" alt="Apartamento alto padrão SP">
+        <div class="card-content">
+          <h3>Apartamento - Praça Villa Lobos</h3>
+          <p>4 dormitórios • 240m² • Vista panorâmica</p>
+          <p><strong>R$ 4.200.000</strong></p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <img src="/ECImoveis/images/casa-teste.jpg" alt="Casa térrea de luxo">
+        <div class="card-content">
+          <h3>Casa térrea - Fazenda Boa Vista</h3>
+          <p>4 suítes • 500m² • Campo de golfe</p>
+          <p><strong>R$ 6.700.000</strong></p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -46,10 +85,33 @@
     </form>
   </section>
 
-  <footer>
-    <p>&copy; 2025 EC Imóveis. Todos os direitos reservados.</p>
+  <footer class="footer-institucional">
+    <div class="footer-container">
+      <div class="footer-menu">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#imoveis">Galeria</a></li>
+          <li><a href="#contato">Apartamentos</a></li>
+        </ul>
+      </div>
+      <div class="footer-nome">
+        <strong>EC Imóveis</strong>
+      </div>
+      <div class="footer-contato">
+        <h4>Endereço</h4>
+        <p>Av. Dra Ruth Cardoso, 4797, Brasiliana 20<br>São Paulo 05477000, BR</p>
+        <p>
+          <a href="https://wa.me/5511916298686" target="_blank">+55 11 91629-8686</a><br>
+          <a href="mailto:carlappestanasantini@gmail.com">carlappestanasantini@gmail.com</a>
+        </p>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
+  <a href="https://wa.me/5511916298686" class="whatsapp-float" target="_blank">
+    <img src="/ECImoveis/images/WhatsApp_icon.png" alt="Fale conosco no WhatsApp">
+  </a>
 </body>
 </html>
