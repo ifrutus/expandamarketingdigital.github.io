@@ -61,7 +61,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #032E51;
+  color: #000000;
   font-weight: 500;
 }
 
@@ -300,7 +300,7 @@ img:not(.no-filter):hover {
 }
 
 .imoveis h2 {
-  color: #032E51;
+  color: #000000;
   margin-bottom: 30px;
 }
 
@@ -457,17 +457,18 @@ button:hover {
 
 /* RODAPÉ */
 .footer-elegante {
-  background-color: #111; /* preto quase absoluto */
+  background-color: #111;
   color: #f5f5f5;
   padding: 60px 20px;
   font-size: 14px;
+  text-align: center;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
@@ -475,6 +476,7 @@ button:hover {
 
 .footer-coluna {
   flex: 1 1 300px;
+  text-align: center;
 }
 
 .footer-coluna h3 {
@@ -504,13 +506,56 @@ button:hover {
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
   }
 
   .footer-coluna {
     margin-bottom: 30px;
   }
 }
+
+.footer-social-icons {
+  border-top: 1px solid #333;
+  padding-top: 30px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-social-icons p {
+  margin-top: 15px;
+  color: #666;
+  letter-spacing: 0.5px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  filter: grayscale(0%);
+}
+
 .whatsapp-float {
   position: fixed;
   width: 60px;
