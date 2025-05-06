@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -7,10 +7,24 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #444444;
-  background-color: #f9f9f9;
+  font-size: clamp(16px, 1.2vw, 20px);
+  font-size: 18px;
+  font-family: 'Playfair Display', serif;
+  color: #f5f5f5;
+  background-color: #000;
   line-height: 1.6;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
 }
 
 header {
@@ -35,7 +49,7 @@ header {
 .logo {
   font-weight: 600;
   font-size: 24px;
-  color: #032E51;
+  color: #000000;
 }
 
 nav ul {
@@ -61,6 +75,16 @@ nav button {
   cursor: pointer;
 }
 
+
+img:not(.no-filter) {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+img:not(.no-filter):hover {
+  filter: grayscale(0%);
+}
+
 .btn-whatsapp {
   background-color: #4CAF70; /* Verde Institucional */
   color: white;
@@ -80,11 +104,12 @@ nav button {
   position: relative;
   height: 100vh;
   background: url('/ECImoveis/images/hero.jpeg') no-repeat center center/cover;
+  filter: grayscale(100%);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: white;    
 }
 
 .overlay {
@@ -178,7 +203,7 @@ nav button {
 
 /* ESPECIALIDADE */
 .especialidade {
-  background-color: #4CAF70; /* verde institucional */
+  background-color: #2b2b2b; /* fundo preto elegante */
   padding: 80px 20px;
 }
 
@@ -194,15 +219,15 @@ nav button {
 
 .especialidade-texto {
   flex: 1 1 500px;
-  color: #f9f9f9;
+  color: #eeeded;
   padding-left: 25px;
-  border-left: 4px solid #D4AF37; /* detalhe dourado premium */
+  border-left: 4px solid #ded9d9; /* detalhe branco sofisticado */
 }
 
 .especialidade-texto h2 {
   font-size: 32px;
   font-weight: 600;
-  color: #ffffff;
+  color: #f6f4f4;
   margin-bottom: 20px;
   line-height: 1.4;
 }
@@ -210,7 +235,7 @@ nav button {
 .especialidade-texto p {
   font-size: 17px;
   line-height: 1.8;
-  color: #e0e0e0;
+  color: #f3efef;
 }
 
 .especialidade-imagem {
@@ -222,10 +247,16 @@ nav button {
   width: 100%;
   max-width: 500px;
   border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* profundidade elegante */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
 }
 
-/* Responsividade */
+.especialidade-imagem img:hover{
+  filter: grayscale(0); /* imagem colorida em contraste com o fundo PB */
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
   .especialidade-container {
     flex-direction: column;
@@ -240,6 +271,25 @@ nav button {
   .especialidade-imagem img {
     max-width: 100%;
   }
+}
+
+.botao-sobre {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.botao-sobre:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 /* SEÇÃO IMÓVEIS */
@@ -303,7 +353,7 @@ nav button {
 }
 
 .contato h2 {
-  color: #032E51;
+  color: #1f1f1f;
   margin-bottom: 30px;
 }
 
@@ -324,7 +374,7 @@ input, textarea {
 
 button {
   padding: 15px;
-  background-color: #51bc7f;
+  background-color: #000000;
   color: white;
   font-weight: bold;
   border: none;
@@ -334,71 +384,121 @@ button {
 }
 
 button:hover {
-  background-color: #51bc7f;
+  background-color: #ffffff;
+  color: #000;
+  border: #000;
+}
+
+.localizacao {
+  background-color: #fff;
+  color: #000;
+  padding: 80px 20px;
+}
+
+.localizacao-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.localizacao-texto {
+  flex: 1 1 500px;
+}
+
+.localizacao-texto h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-left: 4px solid #000;
+  padding-left: 15px;
+}
+
+.localizacao-texto p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.localizacao-mapa {
+  flex: 1 1 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .localizacao-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .localizacao-texto h2 {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+.mapa-com-hover-colorido iframe {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.mapa-com-hover-colorido:hover iframe {
+  filter: grayscale(0%);
 }
 
 /* RODAPÉ */
-footer {
-  background-color: #032E51;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-.footer-institucional {
-  background-color: #2a7c4f; /* tom de verde mais escuro */
-  color: white;
+.footer-elegante {
+  background-color: #111; /* preto quase absoluto */
+  color: #f5f5f5;
   padding: 60px 20px;
+  font-size: 14px;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.footer-menu ul {
-  list-style: none;
-  padding: 0;
+.footer-coluna {
+  flex: 1 1 300px;
 }
 
-.footer-menu ul li {
+.footer-coluna h3 {
+  font-size: 22px;
+  color: #fff;
   margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-.footer-menu a {
+.footer-coluna p {
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.footer-coluna a {
   color: #fff;
   text-decoration: none;
-  font-weight: 400;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
 }
 
-.footer-nome {
-  font-size: 18px;
-  font-weight: bold;
-  align-self: flex-start;
-}
-
-.footer-contato {
-  max-width: 300px;
-}
-
-.footer-contato h4 {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.footer-contato p {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.footer-contato a {
-  color: #fff;
-  text-decoration: underline;
+.footer-coluna a:hover {
+  border-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -407,11 +507,10 @@ footer {
     text-align: center;
   }
 
-  .footer-contato {
-    margin-top: 20px;
+  .footer-coluna {
+    margin-bottom: 30px;
   }
 }
-
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -429,10 +528,12 @@ footer {
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
+  filter: grayscale(100%);
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+  filter: grayscale(0%);
 }
 
 .whatsapp-float img {
