@@ -52,7 +52,66 @@ header {
   color: #000000;
 }
 
-nav ul {
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #888;
+}
+
+.menu-mobile {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+    border-radius: 4px;
+    z-index: 999;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  .nav-list li a {
+    color: #fff;
+    padding: 10px 0;
+    display: block;
+  }
+}
+
+/* nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -73,7 +132,7 @@ nav button {
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
-}
+} */
 
 
 img:not(.no-filter) {

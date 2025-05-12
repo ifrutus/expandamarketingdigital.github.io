@@ -19,14 +19,15 @@
   <header>
     <div class="container">
       <h1 class="logo">EC Imóveis</h1>
-      <nav>
+        <div id="navbar-container"></div>
+      <!-- <nav>
         <ul>
           <li><a href="#home">Início</a></li>
           <li><a href="#imoveis">Imóveis</a></li>
           <li><a href="#contato">Contato</a></li>
           <a href="https://wa.me/5511916298686" target="_blank" class="btn-whatsapp">Whatsapp</a>
         </ul>
-      </nav>
+      </nav> -->
     </div>
   </header>
 
@@ -150,7 +151,18 @@
   <a href="https://wa.me/5511916298686" class="whatsapp-float" target="_blank">
     <img src="/ECImoveis/images/WhatsApp_icon.png" alt="WhatsApp" class="no-filter">
   </a>
-
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar-container").innerHTML = data;
+  
+        // ativar menu mobile
+        document.getElementById("menu-mobile").addEventListener("click", () => {
+          document.querySelector(".nav-list").classList.toggle("active");
+        });
+      });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
